@@ -1,5 +1,7 @@
 # Primera Práctica de Visión por Computador
 
+Para la realización de la práctica hemos desarrollado mas de una solución para la mayoria de las tareas.
+
 ## Inicializacion 
 
 Zona destinada a inicializar algunos valores necesarios para las tareas.
