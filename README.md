@@ -1,27 +1,23 @@
-# Primera Práctica de Visión por Computador
-
-Para la realización de la práctica hemos desarrollado mas de una solución para la mayoria de las tareas.
+# Segunda Práctica de Visión por Computador
 
 ## Inicializacion 
 
 Zona destinada a inicializar algunos valores necesarios para las tareas.
 
-## TAREA: Crea una imagen, p.e. 800x800, con la textura del tablero de ajedrez
+## TAREA: Realiza la cuenta de píxeles blancos por filas, determina el máximo para filas y columnas (uno para cada) y muestra el número de valores que superan en cada caso 0.95*máximo.
 
-Para crear el tablero 8x8 del ajedrez aprovechamos que tenemos el fondo de la imagen ya inicializado a una imagen negra para dibujar solo las casillas blancas. Para dibujar estas casillas, en las iteraciones pares de nuestro bucle for cambiaremos la coordenada en la que comenzamos a dibujar por la segunda casilla y en las impares volveremos a dibujar en la casilla mas a la izquierda, consiguiendo asi la "red" caracteristica del tablero de ajedrez.
-
-## TAREA: Resuelve una de las tareas previas (a elegir) con las funciones de dibujo de OpenCV  :)
+Para realizar esta tarea usaremos la funcion cv2.reduce pero esta vez en dos dimensiones para también poder hacer el calculo por columnas, después añadimos los datos dados por la funcion a una lista y la mostramos.
 
 
+## TAREA: Elige otra imagen, muestra el contenido de alguna de las imágenes resultado de Sobel antes y después de ajustar la escala
 
-## TAREA: Modifica de alguna forma los valores de un plano de la imagen
 
-Para modificar los valores del plano de imagen, capturamos la imagen de la camara y separamos cada plano y jugamos con ellos, primer lugar mostramos el campo rojo y azul invertidos y en segundo lugar quitamos todos los planos y dejamos una escala de grises y blancos.
 
-## TAREA: Pintar círculos en las posiciones del píxel más claro y oscuro de la imagen ¿Si quisieras hacerlo sobre la zona 8x8 más clara/oscura?
+## TAREA: Aplica umbralizado a la imagen resultante de Sobel (valores 0 a 255 y convertida a 8 bits por ejemplo sobel8 = np.uint8(sobel)), y posteriormente realiza el conteo por filas y columnas similar al realizado en el ejemplo con la salida de Canny. Calcula los máximos por filas y columnas, y determina las filas y columnas por encima del 0.95*máximo. Remarca con alguna primitiva gráfica dichas filas y columnas sobre la imagen ¿Cómo se comparan los resultados obtenidos a partir de Sobel y Canny?
 
-Para poder pintar los circulos en los pixeles mas claros y oscuros, capturaremos la camara como hicimos en el caso anterior y pasaremos el frame a una escala de grises para utilizar proximamente la funcion minMaxLoc que nos dara el maximo y minimo local el que dibujaremos la esfera.
 
-## TAREA: Haz tu propuesta pop art
+## TAREA: Asumiendo que quieren mostrar a personas que no forman parte del curso de VC el comportamiento de una o varias funcioens de las vistas hasta este momento aplicadas sobre la entrada de la webcam. ¿Cuál(es) escogerían?
 
-Para la propuesta pop art simplemente manipulamos algunos planos capturados por camara y lo mostramso en viñetas de 4.
+En nuestro caso hemos escogido el pop-art de la practica anterior debido a su gran llamativo visual y por otro lado la eliminacion de fondo también debido a que creemos que es lo que mas interes podria levantar para gente que no entiende cursa la asignatura. 
+
+## TAREA: Tras ver los vídeos My little piece of privacy, Messa di voce y Virtual air guitar propongan (los componentes de cada grupo) una reinterpretación del procesamiento de imágenes con las técnicas vistas o que conozcan.
